@@ -66,6 +66,7 @@
 		SongPlayer.currentSong = null;
 		SongPlayer.currentTime = null;
 		SongPlayer.volume = 60;
+		SongPlayer.muted = false;
 
 
 		/**
@@ -137,8 +138,21 @@
 			SongPlayer.volume = volume;
 		};
 
+		SongPlayer.toggleMute = function () {
+			if (SongPlayer.volume === 0) {
+				SongPlayer.muted = false;
+				SongPlayer.setVolume(SongPlayer.prevVolume);
+			} else {
+				// Saving previous volume to return to after un-muting
+				SongPlayer.prevVolume = SongPlayer.volume;
+				SongPlayer.muted = true;
+				SongPlayer.setVolume(0);
+			}
+		}
+
 		return SongPlayer;
 	}
+
 
 	angular
 		.module('blocJams')
