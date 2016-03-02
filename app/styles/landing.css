@@ -13,9 +13,6 @@
 .hero-content .hero-title {
   position: absolute;
   top: 40%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
   width: 100%;
   text-align: center;
   font-size: 4rem;
@@ -33,16 +30,7 @@
   position: relative;
   padding: 2rem;
   text-align: center;
-  opacity: 0;
-  -webkit-transform: scaleX(0.9) translateX(-15rem);
-  -moz-transform: scaleX(0.9) translateX(-15rem);
-  transform: scaleX(0.9) translateX(-15rem);
-  -webkit-transition: all .8s ease-in-out;
-  -moz-transition: all .8s ease-in-out;
-  transition: all .8s ease-in-out;
-  -webkit-transition-delay: 0.4s;
-  -moz-transition-delay: 0.4s;
-  transition-delay: 0.4s;
+  opacity: 1;
 }
 
 .point .point-title {
